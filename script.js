@@ -10,21 +10,22 @@ console.log("it works!!")
 // LinkedList Class
 
 class LinkedList {
+    // this allows head to initialize to null while being open to future changes
     constructor(head = null) {
         this.head = head;
     };
 
-    // empty our list
+    // empty the list
     clear() {
         this.head = null;
     };
 
-    // returns the first node in the list
+    // return the first node in the list
     head() {
         return this.head;
     };
 
-    // returns the last node in the list
+    // return the last node in the list
     tail() {
         let lastNode = this.head;
         if (lastNode) {
@@ -35,7 +36,7 @@ class LinkedList {
         return lastNode;
     };
 
-    // returns the total number of nodes in the list
+    // return the total number of nodes in the list
     size() {
         let count = 0;
         let node = this.head;
@@ -63,9 +64,17 @@ class LinkedList {
         lastNode.next = node;
     }
 
-    // removes the last element from the list
+    // remove the last node from the list
     pop() {
-    
+        let lastNode = this.head;
+        if (lastNode.next) {
+            // find the penultimate node
+            while (lastNode.next.next) {
+                lastNode = lastNode.next;
+            }
+        }
+        // pop the last node by setting the penultimate node's "next" to null
+        lastNode.next = null;
     }
 
     // returns the node at the given index
