@@ -12,12 +12,28 @@ console.log("it works!!")
 class LinkedList {
     constructor(head = null) {
         this.head = head;
-    }
+    };
 
     // empty our list
     clear() {
         this.head = null;
-    }
+    };
+
+    // returns the first node in the list
+    head() {
+        return this.head;
+    };
+
+    // returns the last node in the list
+    tail() {
+        let lastNode = this.head;
+        if (lastNode) {
+            while (lastNode.next) {
+                lastNode = lastNode.next;
+            };
+        };
+        return lastNode;
+    };
 
     // add a new node to the start of the list
     prepend(value) {
@@ -29,20 +45,14 @@ class LinkedList {
     
     }
 
-    // returns the first node in the list
-    head() {
     
-    }
 
     // removes the last element from the list
     pop() {
     
     }
 
-    // returns the last node in the list
-    tail() {
     
-    }
 
     // returns the node at the given index
     at(index) {
