@@ -10,17 +10,18 @@ console.log("it works!!")
 // LinkedList Class
 
 class LinkedList {
-    constructor(listName) {
-        this.listName = listName;
+    constructor(head = null) {
+        this.head = head;
+    }
+
+    // empty our list
+    clear() {
+        this.head = null;
     }
 
     // add a new node to the start of the list
     prepend(value) {
-        /*
-        create newNode
-        reset head to newNode
-        */
-       head = new Node("A", "head");
+        
     }
 
     // add a new node to the end of the list
