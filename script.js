@@ -1,12 +1,3 @@
-console.log("it works!!")
-
-/* Questions 
-1. How do we know what "next" is?
-2. What actually is a "reference to the next node"?
-    - "head" seems to just be some idea that we (humans) use for the purpose of writing this code.
-
-*/
-
 // LinkedList Class
 
 class LinkedList {
@@ -77,25 +68,23 @@ class LinkedList {
         lastNode.next = null;
     }
 
+    // returns true if the passed in value is in the list, otherwise returns false
+    contains(seekingFor) {
+       
+    }
+
     // returns the node at the given index
     at(index) {
     
     }
 
-    
-
-    // returns true if the passed in value is in the list, otherwise returns false
-    contains(value) {
-    
-    }
-
-    // returns the index of the node containing value, or null if not found
-    find(value) {
+    // returns the index of the node, or null if not found
+    find(node) {
 
     }
 
-    // inserts a new node with the provided value at the given index
-    insertAtValue(value, index) {
+    // inserts a new node at the given index
+    insertAtValue(node, index) {
     
     }
 
