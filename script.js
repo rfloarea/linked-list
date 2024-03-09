@@ -35,6 +35,17 @@ class LinkedList {
         return lastNode;
     };
 
+    // returns the total number of nodes in the list
+    size() {
+        let count = 0;
+        let node = this.head;
+        while (node) {
+            count++;
+            node = node.next;
+        }
+        return count;  
+    };
+
     // add a new node to the start of the list
     prepend(value) {
         
@@ -45,24 +56,17 @@ class LinkedList {
     
     }
 
-    
-
     // removes the last element from the list
     pop() {
     
     }
-
-    
 
     // returns the node at the given index
     at(index) {
     
     }
 
-    // returns the total number of nodes in the list
-    size() {
-        
-    }
+    
 
     // returns true if the passed in value is in the list, otherwise returns false
     contains(value) {
