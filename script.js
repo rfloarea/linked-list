@@ -47,14 +47,20 @@ class LinkedList {
     };
 
     // add a new node to the start of the list
-    prepend(value) {
-        value.next = this.head;
-        this.head = value;
+    prepend(node) {
+        node.next = this.head;
+        this.head = node;
     }
 
     // add a new node to the end of the list
-    append(value) {
-    
+    append(node) {
+        let lastNode = this.head;
+        if (lastNode) {
+            while (lastNode.next) {
+                lastNode = lastNode.next;
+            };
+        };
+        lastNode.next = node;
     }
 
     // removes the last element from the list
