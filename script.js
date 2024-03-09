@@ -48,7 +48,8 @@ class LinkedList {
 
     // add a new node to the start of the list
     prepend(value) {
-        
+        value.next = this.head;
+        this.head = value;
     }
 
     // add a new node to the end of the list
